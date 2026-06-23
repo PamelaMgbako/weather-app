@@ -1,0 +1,296 @@
+
+/* CSS Reset - Remove all defaults */
+/*resetting the default styles for all elements to ensure consistency across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f0f4f8;
+  color: #1a3c5e;
+  line-height: 1.5;
+}
+
+/*header styling */
+header {
+  background-color: #1a3c5e;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  display: flex;
+  max-width: 100%;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*header h1 styling */
+header h1 {
+  font-size: 1.6em;
+  white-space: nowrap;
+}
+
+/*button styling */
+
+/*city input styling */
+#cityInput {
+  background-color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  flex: 1;
+  outline: none;
+}
+
+/*search button styling */
+#searchBtn {
+  background-color: #2e86ab;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+/*hover effect for search button */
+#searchBtn:hover {
+  background-color: #1a6a8a;
+  transform: translateY(-1px);
+}
+
+/*main styling */
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/*hero section styling */
+#heroSection {
+  background-color: #2e86ab;
+  padding: 30px 20px;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/*weather description styling */
+#weatherDescription {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+
+/*city name styling */
+#cityName {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/*country styling */
+#country {
+  font-size: 1.25em;
+  margin-bottom: 8px;
+}
+
+/*current temperature styling */
+#temperature {
+  font-size: 3.5em;
+font-weight: bold;
+margin-bottom: 4px;
+}
+
+
+/*weather icon styling */
+#weatherIcon {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+
+/*current weather stats section styling */
+#currentWeatherStatsSection {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+/*current weather stats section heading styling */
+#currentWeatherStatsSection h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display:none;
+}
+
+/*stat item styling */
+.statItem {
+  text-align: center;
+  flex: 1;
+}
+
+/*stat label styling */
+.statLabel {
+  font-size: 0.9em;
+  color: #555;
+}
+/*stat value styling */
+.statValue {
+    font-size: 1.35em;
+    font-weight: bold;
+    margin-top: 4px;
+    color: #1a3c5e;
+    white-space: nowrap;
+    }
+
+    /*forecast section styling */
+#forecastSection {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/*forecast section heading styling */
+#forecastSection h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/*forecast row styling */
+.forecastRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 8px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.2s ease;
+}
+
+/*hover effect for forecast rows */
+.forecastRow:hover {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+
+/*forecast day styling */
+.forecastDay {
+  font-size: 0.9em;
+  color: navy;
+  font-weight: bold;
+  width: 110px;
+}
+
+/*forecast icon styling */
+.forecastIcon {
+  font-size: 2em;
+  text-align: center;
+  flex: 1;
+}
+
+/*forecast temperature styling */
+
+.forecastTemp {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1a3c5e;
+  text-align: right;
+  min-width: 110px;
+}
+
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+  
+    /* Changes on small screens? */
+  header {
+    /* hint: Stack items  vertically*/
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Adjust the padding for the main content area */
+
+  main {
+    /* padding gets smaller */
+    padding: 10px;
+  }
+
+  #temperature {
+    font-size: 2em;
+  }
+
+  #searchBtn {
+    width: 100%;
+  }
+
+  #cityInput {
+    width: 100%;
+  }
+}
+
+
+
+#loadingMessage {
+  background-color: #2e86ab;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+
+
+/* When JavaScript adds class 'active' it becomes visible */
+#loadingMessage.show {
+  display: block; /* Show when 'show' class is added */
+}
+
+/* Error message styling */
+#errorSection {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+
+/* Error message text styling */
+#errorMessage {
+  font-size: 1em;
+  font-weight: bold;
+  color: #4f0606;
+}
+
+
+/* Show the error section when the 'show' class is added */
+#errorSection.show {
+  display: block; /* Show when 'show' class is added */
+}

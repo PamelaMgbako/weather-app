@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Weather App</h1>
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button id="searchBtn">Search</button>
+      <hr />
+    </header>
+
+    <main>
+
+      <!-- Loading message -->
+<div id="loadingMessage">
+  Loading weather data...
+</div>
+
+      <section id="heroSection">
+        <!-- The hero section a display area for the current weather dynamically shows city name, country, current temperature,and weather description -->
+        <div id="weatherIcon"></div>
+<div id="cityName"></div>
+<div id="country"></div>
+<div id="temperature"></div>
+<div id="weatherDescription"></div>
+      </section>
+      <section id="currentWeatherStatsSection">
+
+        <!-- The stats row showing humidity, wind speed and UV index -->
+        <h2>Current Weather Stats</h2>
+
+        <div id="humidity" class="statItem">
+          <p class="statLabel">Humidity</p>
+          <p class="statValue"></p>
+        </div>
+        <div id="windSpeed" class="statItem">
+          <p class="statLabel">Wind</p>
+          <p class="statValue"></p>
+        </div>
+        <div id="uvIndex" class="statItem">
+          <p class="statLabel">UV Index</p>
+          <p class="statValue"></p>
+        </div>
+      </section>
+
+      <section id="forecastSection">
+        <!-- The forecast section that dynamically shows 5 days forecast -->
+        <h2>5-Day Forecast</h2>
+
+        <!-- Weather information will be displayed here -->
+        <div id="forecastContainer"></div>
+      </section>
+
+      <section id="errorSection">
+        <!-- The error message section that dynamically shows error messages-->
+        <div id="errorMessage"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
